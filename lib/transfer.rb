@@ -18,7 +18,7 @@ class Transfer
   
   def execute_transaction
     if valid?
-      @receiver.deposit(@transfer_amount)
+      @receiver.deposit(@amount)
     else
       return false
     end
