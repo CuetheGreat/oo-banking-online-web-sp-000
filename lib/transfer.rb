@@ -7,7 +7,6 @@ class Transfer
     @status = "pending"
     @amount = transfer_amount
     puts "amount: #{@amount}, sender: #{@sender.balance}, receiver: #{@receiver.balance} "
-    @count = 1
   end
   
   def valid?
@@ -19,7 +18,7 @@ class Transfer
   end
   
   def execute_transaction
-    if valid? && @count > 0 && @status != "complete"
+    if valid? && @status != "complete"
       @sender.withdraw(@amount)
       @receiver.deposit(@amount)
       @status = "complete"
