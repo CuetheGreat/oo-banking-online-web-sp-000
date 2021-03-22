@@ -21,6 +21,7 @@ class Transfer
     if valid?
       @receiver.deposit(@amount)
       @sender.withdraw(@amount)
+      @status = "complete"
     else
       return false
     end
