@@ -6,7 +6,6 @@ class Transfer
     @receiver = receiver
     @status = "pending"
     @amount = transfer_amount
-    puts "amount: #{@amount}, sender: #{@sender.balance}, receiver: #{@receiver.balance} "
   end
   
   def valid?
@@ -28,6 +27,8 @@ class Transfer
     end
   end
   
+  def reverse_transaction
+    
   
     
 end
