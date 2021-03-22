@@ -20,8 +20,8 @@ class Transfer
   
   def execute_transaction
     if valid? && @count > 0
-      @receiver.deposit(@amount)
       @sender.withdraw(@amount)
+      @receiver.deposit(@amount)
       @status = "complete"
       @count = 0
     else
