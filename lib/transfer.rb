@@ -19,7 +19,7 @@ class Transfer
   def execute_transaction
     if valid?
       puts @amount
-      puts @receiver.
+      puts @receiver.display_balance
       @receiver.deposit(@amount)
     else
       return false
