@@ -12,11 +12,11 @@ class BankAccount
   end
   
   def deposit(amount)
-    @deposit += amount
+    @balance += amount
   end
   
   def display_balance
-    @deposit
+    @balance
   end
   
   def valid?
